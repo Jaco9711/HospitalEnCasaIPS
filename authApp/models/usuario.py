@@ -14,13 +14,13 @@ class UserManager(BaseUserManager):
         return user
     
 class Usuario(AbstractBaseUser, PermissionsMixin):
-    u_username = models.CharField('Usuario', primary_key=True, max_length=30, null=False)
-    u_contrasena = models.CharField('Contraseña', max_length=256, unique=False, null=False)
+    u_username = models.CharField('Usuario', primary_key=True, max_length=30, null=False, unique=True)
+    password = models.CharField('Contraseña', max_length=256, unique=False, null=False)
     u_perfil = models.CharField('Perfil usuario', max_length=20, unique=False, null=False)
     u_nombres = models.CharField('Nombres usuario', max_length=20,unique=False, null=False)
     u_apellidos = models.CharField('Apellidos usuario', max_length=20,unique=False, null=False)
     u_telefono = models.CharField('Teléfono usuario', max_length=15,unique=False, null=False)
-    u_genero = models.CharField('Género usuario', max_length=1,unique=False, null=True)
+    u_genero = models.CharField('Genero usuario', max_length=1,unique=False, null=True)
     
     def save(self, **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'

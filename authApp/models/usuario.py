@@ -28,4 +28,4 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
         super().save(**kwargs)
     
     objects = UserManager()
-    USERNAME_FIELD = 'username'
+    USERNAME_FIELD = 'u_username'

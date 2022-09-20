@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
+
 class UserManager(BaseUserManager):
     def create_user(self, username, password=None):
         """
@@ -14,7 +15,7 @@ class UserManager(BaseUserManager):
         return user
     
 class Usuario(AbstractBaseUser, PermissionsMixin):
-    u_username = models.CharField('Usuario', primary_key=True, max_length=30, null=False, unique=True)
+    u_username = models.CharField('Usuario', primary_key=True, max_length=30, null=False)
     password = models.CharField('Contraseña', max_length=256, unique=False, null=False)
     u_perfil = models.CharField('Perfil usuario', max_length=20, unique=False, null=False)
     u_nombres = models.CharField('Nombres usuario', max_length=20,unique=False, null=False)

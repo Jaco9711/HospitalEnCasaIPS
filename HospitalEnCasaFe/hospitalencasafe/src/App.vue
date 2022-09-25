@@ -1,9 +1,14 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/cu">Crear Usuario</router-link>|
+    <router-link to="/rps">Registrar PersonalSalud</router-link>|
+    <router-link to="/rp">Registrar Paciente</router-link>|
+    <router-link to="/rf">Registrar Familiar</router-link>|    
+    <router-link to="/consPaciente">Consultar Paciente</router-link>
+    
   </nav>
   <router-view/>
+
 </template>
 
 <style>

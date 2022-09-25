@@ -1,19 +1,48 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from './views/HomeView.vue'
+import app from './App.vue'
+import Test from './components/Test.vue'
+import RegistroPersonalSalud from './components/RegistroPersonalSalud.vue'
+import RegistroFamiliar from './components/RegistrarFamiliar.vue'
+import ConsultarPaciente from './components/ConsultarPaciente.vue'
+import RegistrarPaciente from './components/RegistrarPaciente.vue'
+import CrearUsuario from './components/CrearUsuario.vue'
+
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/root',
+    name: 'root',
+    component: app
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './views/AboutView.vue')
+    path: '/test',
+    name: 'test',
+    component: Test
+  },
+  {
+    path: '/rps',
+    name: 'RegistroPersonalSalud',
+    component: RegistroPersonalSalud
+  },
+  {
+    path: '/rf',
+    name: 'RegistroFamiliar',
+    component: RegistroFamiliar
+  },
+  {
+    path: '/consPaciente',
+    name: 'consPaciente',
+    component: ConsultarPaciente
+  },
+  {
+    path: '/rp',
+    name: 'RegistrarPaciente',
+    component: RegistrarPaciente
+  },
+  {
+    path: '/cu',
+    name: 'CrearUsuario',
+    component: CrearUsuario
   }
 ]
 

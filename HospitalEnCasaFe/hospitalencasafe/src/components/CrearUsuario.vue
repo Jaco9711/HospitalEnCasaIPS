@@ -36,7 +36,7 @@
                 <option>Femenino</option>
             </select>     
             <br>
-            <button>Registrar</button>    
+            <button class="btn-reg">Registrar</button>    
         </form>
     </div>
 </div>
@@ -96,4 +96,17 @@
     background: crimson;
     border: 1px solid #283747;
     }
+
+    .btn-reg{
+        margin-top:10px;
+        margin-bottom:5px;
+    }
+    .RegistroUsuario input{
+        margin-top:10px;
+        margin-bottom:10px;
+    }   
+    .RegistroUsuario form{
+        margin-top:10px;
+        margin-bottom:10px;
+    }     
     </style>

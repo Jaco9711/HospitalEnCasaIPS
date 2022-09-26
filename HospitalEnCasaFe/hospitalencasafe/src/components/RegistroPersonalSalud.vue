@@ -101,4 +101,12 @@ color: #E5E7E9;
 background: crimson;
 border: 1px solid #283747;
 }
+.RegistroPersonalSalud input{
+        margin-top:10px;
+        margin-bottom:5px;
+    }   
+    .RegistroPersonalSalud form{
+        margin-top:10px;
+        margin-bottom:5px;
+    }  
 </style>

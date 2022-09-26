@@ -74,10 +74,10 @@
     }
     
     .RegistroFamiliar button{
-    width: 100%;
+        width: 100%;
     height: 40px;
     color: #E5E7E9;
-    background: #283747;
+    background: #36a9cb;
     border: 1px solid #E5E7E9;
     border-radius: 5px;
     padding: 10px 25px;
@@ -85,8 +85,8 @@
     }
     
     .RegistroFamiliar button:hover{
-    color: #E5E7E9;
-    background: crimson;
+        color: #E5E7E9;
+    background: #ffab42;
     border: 1px solid #283747;
     }
 

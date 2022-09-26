@@ -110,20 +110,20 @@ border: 1px solid #283747;
 }
 
 .ConsultaPaciente button{
-width: 100%;
-height: 40px;
-color: #E5E7E9;
-background: #283747;
-border: 1px solid #E5E7E9;
-border-radius: 5px;
-padding: 10px 25px;
-margin: 5px0 25px0;
+    width: 100%;
+    height: 40px;
+    color: #E5E7E9;
+    background: #36a9cb;
+    border: 1px solid #E5E7E9;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin: 5px0 25px0;
 }
 
 .ConsultaPaciente button:hover{
-color: #E5E7E9;
-background: crimson;
-border: 1px solid #283747;
+    color: #E5E7E9;
+    background: #ffab42;
+    border: 1px solid #283747;
 }
 .Paciente{
     margin: 0;

@@ -1,7 +1,7 @@
 <template>
     <h1>Registrar Paciente</h1>
-    <div class="RegistroUsuario">
-        <div class="container_RegistroUsuario">
+    <div class="RegistroPaciente">
+        <div class="container_RegistroPaciente">
             <form>
                 <label id="p_username">Usuario:
                 <input type="text" placeholder="Usuario" required>
@@ -58,7 +58,7 @@
 </template>
 <!--esto pues son los colores jaja-->
 <style>
-    .RegistroUsuario{
+    .RegistroPaciente{
         margin: 0;
         padding: 0%;
         height: 100%;
@@ -68,7 +68,7 @@
         align-items: center;
     }
     
-    .container_RegistroUsuario{
+    .container_RegistroPaciente{
         border: 3px solid #283747;
         border-radius: 10px;
         width: 25%;
@@ -79,15 +79,15 @@
         align-items: center;
     }
     
-    .RegistroUsuario h2{
+    .RegistroPaciente h2{
         color: #283747;
     }
     
-    .RegistroUsuario form{
+    .RegistroPaciente form{
         width: 70%;
     }
     
-    .RegistroUsuario input{
+    .RegistroPaciente input{
     height: 40px;
     width: 100%;
     box-sizing: border-box;
@@ -96,20 +96,20 @@
     border: 1px solid #283747;
     }
     
-    .RegistroUsuario button{
-    width: 100%;
+    .RegistroPaciente button{
+        width: 100%;
     height: 40px;
     color: #E5E7E9;
-    background: #283747;
+    background: #36a9cb;
     border: 1px solid #E5E7E9;
     border-radius: 5px;
     padding: 10px 25px;
     margin: 5px0 25px0;
     }
     
-    .RegistroUsuario button:hover{
-    color: #E5E7E9;
-    background: crimson;
+    .RegistroPaciente button:hover{
+        color: #E5E7E9;
+    background: #ffab42;
     border: 1px solid #283747;
     }
     </style>

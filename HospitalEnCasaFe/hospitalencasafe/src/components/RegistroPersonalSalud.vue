@@ -1,7 +1,7 @@
 <template>
     <br>
     <div>
-        <center><h1>Resgistro personal salud</h1></center>
+        <center><h1>Registro personal salud</h1></center>
         <br>
     </div>
     <div class="RegistroPersonalSalud">

@@ -3,18 +3,13 @@
     <div class="RegistroPaciente">
         <div class="container_RegistroPaciente">
             <form>
-                <label id="p_username">Usuario:
+                <label id="p_username">Nombre Usuario:
                 <input type="text" placeholder="Usuario" required>
                 </label>
                 <br>
                 <br>
-                <label>PersonaldeSaludAsignado
-                <select id="p_personal_salud">
-                <option>Médico especialista</option>
-                <option>Medico general</option>
-                <option>Enfermero(a)</option>
-                <option>Auxiliar</option>
-                </select>
+                <label>ID Personal de Salud Asignado
+                <input type="Number" id="p_personal_salud" placeholder="ID PSalud">
                 </label>
                 <br>
                 <br>
@@ -97,7 +92,7 @@
     }
     
     .RegistroPaciente button{
-        width: 100%;
+    width: 100%;
     height: 40px;
     color: #E5E7E9;
     background: #36a9cb;
@@ -108,8 +103,21 @@
     }
     
     .RegistroPaciente button:hover{
-        color: #E5E7E9;
+    color: #E5E7E9;
     background: #ffab42;
     border: 1px solid #283747;
     }
+
+    .btn-reg{
+        margin-top:10px;
+        margin-bottom:5px;
+    }
+    .RegistroPaciente input{
+        margin-top:10px;
+        margin-bottom:10px;
+    }   
+    .RegistroPaciente form{
+        margin-top:10px;
+        margin-bottom:10px;
+    }     
     </style>

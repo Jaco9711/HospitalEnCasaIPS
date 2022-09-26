@@ -9,7 +9,7 @@
             <form id="processConsultaPaciente">
                 <br>
                 <label id="p_id">Ingrese el ID del paciente:
-                <input type="number" placeholder="Ingrese el ID del paciente" required>
+                <input type="number" placeholder="ID del paciente" required>
                 </label>
                 <br>
                 <br>
@@ -138,7 +138,12 @@ border: 1px solid #283747;
     table-layout: auto;
     width: 100%;
     border-collapse: separate;
+    border-radius: 10px;
     text-align: left;
     border:1px solid black;
+    background-color: white;
+}
+.Paciente td{
+    padding:5px;
 }
 </style>

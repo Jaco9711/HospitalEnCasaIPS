@@ -1,6 +1,5 @@
 <template>
     <h1>Registrar Paciente</h1>
-    <h1>Crear Usuario</h1>
     <div class="RegistroUsuario">
         <div class="container_RegistroUsuario">
             <form>

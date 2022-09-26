@@ -24,6 +24,9 @@
             <label id="ps_especialidad">Perfil:
             <input type="text" placeholder="Especialidad" required>
             </label>
+            <br>
+            <br>
+            <button>Registrar</button> 
         </form>
         <br>
         </div>

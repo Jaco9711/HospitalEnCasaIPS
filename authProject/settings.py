@@ -27,10 +27,7 @@ SECRET_KEY = 'django-insecure-js$^&76s(zr&dca50=jfnploo)$p8v^c!lvpnt#h90cnim$72t
 DEBUG = True
 
 ALLOWED_HOSTS = []
-<<<<<<< HEAD
-=======
 CORS_ALLOW_ALL_ORIGINS = True
->>>>>>> cfd79bd38e69208a9d57aca61038de6aa58faa5c
 
 
 # Application definition
@@ -44,10 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authApp',
-<<<<<<< HEAD
-=======
     'corsheaders',
->>>>>>> cfd79bd38e69208a9d57aca61038de6aa58faa5c
 ]
 
 SIMPLE_JWT = {
@@ -78,16 +72,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-<<<<<<< HEAD
-]
-
-=======
     "corsheaders.middleware.CorsMiddleware",
 ]
 
 AUTH_USER_MODEL = "authApp.Usuario" 
 
->>>>>>> cfd79bd38e69208a9d57aca61038de6aa58faa5c
 ROOT_URLCONF = 'authProject.urls'
 
 TEMPLATES = [
@@ -115,17 +104,10 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-<<<<<<< HEAD
-        'NAME': 'ddnksb1iube3c6',
-        'USER': 'zggybxeijbciug',
-        'PASSWORD': '9d1ae02dea2a798c1db6b2a7012bb30ee3e7b686d86fc174ccc9f0707e46fe1f',
-        'HOST': 'ec2-44-209-158-64.compute-1.amazonaws.com',
-=======
         'NAME': 'df1rgcl2o01ojv',
         'USER': 'ngfqfftvybykqw',
         'PASSWORD': 'b3884e757a544101973d022fd0c3e84e5607719450038b40b1efd319dc0140b1',
         'HOST': 'ec2-44-209-57-4.compute-1.amazonaws.com',
->>>>>>> cfd79bd38e69208a9d57aca61038de6aa58faa5c
         'PORT': '5432',
     }
 }

@@ -2,36 +2,36 @@
     <h1>Crear Usuario</h1>
     <div class="RegistroUsuario">
         <div class="container_RegistroUsuario">
-        <form>
+        <form v-on:submit.prevent="processCreateUser">
             <label>
                 Username:
             </label>
-            <input type="text" placeholder="Username">
+            <input type="text" v-model="user.u_username" placeholder="Username">
             <br>
             <label>
                 Password:
             </label>
-            <input type="Password">  
+            <input v-model="user.password" type="Password">  
             <br>     
             <label>
                 Nombres:
             </label>
-            <input type="text" placeholder="Nombres">                 
+            <input v-model="user.u_nombres" type="text" placeholder="Nombres">                 
             <br>               
             <label>
                 Apellidos:
             </label>
-            <input type="text" placeholder="Apellidos">            
+            <input type="text" v-model="user.u_apellidos" placeholder="Apellidos">            
             <br>   
             <label>
                 Telefono:
             </label>
-            <input type="text" placeholder="Telefono">            
+            <input type="text" v-model="user.u_telefono" placeholder="Telefono">            
             <br>               
             <label>
                 Genero:
             </label>
-            <select id="u_genero">
+            <select v-model="user.u_genero" id="u_genero">
                 <option>Masculino</option>
                 <option>Femenino</option>
             </select>     
@@ -41,6 +41,42 @@
     </div>
 </div>
 </template>
+
+<script>
+import axios from 'axios';
+export default { 
+    data:function(){
+        return{
+            user:{
+                u_username:"",
+                password:"",
+                u_perfil: "this",
+                u_nombres: "",
+                u_apellidos: "",
+                u_telefono: ""
+
+            }
+        }
+    },
+
+    methods:{
+        processCreateUser:function(){
+            console.log(this.user);
+            axios.post("https://bank-be-g60-ja.herokuapp.com/user/", this.user,{headers:{}})
+            //axios.post("https://bank-be-g59-60-ja.herokuapp.com/user/", this.user,{headers:{}})
+            .then((result)=>{
+                alert("Registro Exitoso");
+
+            }).catch((error)=>{
+                console.log(error)
+                alert("Error: fallo el registro");
+
+            })
+        }
+    }
+}
+</script>
+
 <style>
     .RegistroUsuario{
         margin: 0;

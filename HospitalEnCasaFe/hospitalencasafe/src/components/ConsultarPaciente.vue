@@ -145,5 +145,7 @@ border: 1px solid #283747;
 }
 .Paciente td{
     padding:5px;
+    border-left: solid 1px black;
+    border-bottom:solid 1px black;
 }
 </style>

@@ -21,13 +21,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-js$^&76s(zr&dca50=jfnploo)$p8v^c!lvpnt#h90cnim$72t'
+SECRET_KEY = 'django-insecure-e)=n!m&yv^=s-b&^bia%#p)g$9r@n#hlm1)jfwscgi8oo27ig0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
+
+#Configuración despliegue FE local
+"""CORS_ORIGIN_WHITELIST = (
+  'http://localhost:8080',
+  'http://localhost:8080/#/consPaciente/',
+  'http://localhost:8080/consPaciente/',
+
+)"""
 
 
 # Application definition
@@ -55,15 +63,6 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
-REST_FRAMEWORK = {
-            'DEFAULT_PERMISSION_CLASSES': (
-                'rest_framework.permissions.AllowAny',
-            ),
-            'DEFAULT_AUTHENTICATION_CLASSES': (
-                'rest_framework_simplejwt.authentication.JWTAuthentication',
-            )
-}
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -72,10 +71,19 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION_CLASSES': (
+            'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 AUTH_USER_MODEL = "authApp.Usuario" 
+
 
 ROOT_URLCONF = 'authProject.urls'
 
@@ -153,3 +161,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import django_heroku
+django_heroku.settings(locals())
